@@ -1,5 +1,7 @@
 # WindhorseTour — 2026 Website Re-theme (RFP)
 
+> **Access notice:** You should not be reviewing this repository unless you have completed the [Vendor Interest Form](https://forms.gle/cNqZQsQLu3uXHrQK9). WindhorseTour uses that submission to qualify and invite bidders.
+
 Public bidding materials for the 2026 WordPress block-theme re-theme.
 
 
