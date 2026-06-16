@@ -7,7 +7,7 @@
 ## Maintenance notes
 
 - WindhorseTour **generally updates all plugins in the first week of each calendar month**.
-- We are **testing and migrating to WordPress 7**. Production runs WordPress **6.x** today; core may move to **7.x** during the re-theme program. Plan for regression testing after WordPress and plugin updates.
+- We are **upgrading to WordPress 7 now**; that upgrade is expected to **complete before re-theme kickoff**. Production is on **6.9.4** until cutover. Re-theme contract work begins on **WordPress 7**.
 
 ---
 
@@ -15,7 +15,7 @@
 
 | Component | Version | Notes |
 |-----------|---------|--------|
-| **WordPress core** | 6.9.4 | WP **7** migration in progress |
+| **WordPress core** | 6.9.4 → **7** (in progress) | WP **7** upgrade underway; expected **complete before re-theme kickoff** |
 | **travelverse-child** | 1.0.0 | Legacy production theme — **reference only** (replaced by new block theme) |
 | **TravelVerse** (parent) | 1.0.4 | Legacy parent theme |
 
