@@ -5,11 +5,26 @@ alwaysApply: true
 
 # Public RFP repository boundary
 
-`WindhorseTour/wht-2026-retheme-rfp` is the **public bidding** repo. Private vendor evaluation lives in a **separate** procurement repository and must **never** appear here.
+`WindhorseTour/wht-2026-retheme-rfp` is the **public bidding** repo only.
+
+## Correct vs forbidden paths
+
+| Use | Path |
+|-----|------|
+| **Private procurement (ONLY here)** | `/Users/hggreenberg/Development/wht-2026-retheme-procurement/` |
+| **Public RFP (this repo)** | `/Users/hggreenberg/Development/wht-2026-retheme-rfp/` |
+
+**FORBIDDEN — never create, write, copy, or mkdir:**
+
+`/Users/hggreenberg/Development/wht-2026-retheme-rfp/wht-2026-retheme-procurement/`
+
+That nested folder was a historical agent mistake. `.gitignore` hides it from git but **the folder must not exist on disk** in the RFP repo. If you see it, **delete it** (`rm -rf wht-2026-retheme-procurement`) and write to the sibling repo instead.
+
+Do not use a combined Cursor workspace that nests procurement inside the RFP tree.
 
 ## Never add, copy, link, or commit
 
-- The `wht-2026-retheme-procurement/` directory or any clone/checkout of the private procurement repo
+- The `wht-2026-retheme-procurement/` directory **inside this repo** (or any nested clone)
 - Vendor scorecards, vendor notes, or files under `vendors/` from procurement
 - Executed/signed NDAs (`*EXECUTED*.pdf`, signed PDFs, signature certificates)
 - Vendor proposals, bid analysis, or correspondence meant for internal evaluation
@@ -22,10 +37,11 @@ alwaysApply: true
 
 ## Before any git commit or push
 
-1. Run `git status` and inspect every added/changed path.
-2. If any path matches the forbidden list above, **stop** — do not commit or push.
-3. Do not use `git add -f` to bypass `.gitignore` for procurement or evaluation files.
+1. Confirm `wht-2026-retheme-procurement/` does **not** exist in this repo root.
+2. Run `git status` and inspect every added/changed path.
+3. If any path matches the forbidden list above, **stop** — do not commit or push.
+4. Do not use `git add -f` to bypass `.gitignore` for procurement or evaluation files.
 
-## If asked to log vendor NDAs, proposals, or evaluation work
+## If asked to log vendor NDAs, proposals, scores, or evaluation work
 
-Refuse in this repo. Tell the user to use the private procurement repository instead.
+**Refuse in this repo.** Write only to `/Users/hggreenberg/Development/wht-2026-retheme-procurement/`.

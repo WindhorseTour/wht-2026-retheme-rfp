@@ -1,0 +1,16 @@
+#!/bin/sh
+# Block commits if private procurement material exists in this public RFP repo.
+
+if [ -d wht-2026-retheme-procurement ]; then
+  echo "BLOCKED: wht-2026-retheme-procurement/ must not exist inside wht-2026-retheme-rfp."
+  echo "Private evaluation belongs in: ~/Development/wht-2026-retheme-procurement"
+  echo "Delete the nested folder, then commit again."
+  exit 1
+fi
+
+if git diff --cached --name-only | grep -q '^wht-2026-retheme-procurement/'; then
+  echo "BLOCKED: staged paths under wht-2026-retheme-procurement/ are not allowed in this repo."
+  exit 1
+fi
+
+exit 0
