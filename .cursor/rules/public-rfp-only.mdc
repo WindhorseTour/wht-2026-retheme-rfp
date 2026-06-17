@@ -1,0 +1,31 @@
+---
+description: This repo is public RFP only — never add private procurement or evaluation content
+alwaysApply: true
+---
+
+# Public RFP repository boundary
+
+`WindhorseTour/wht-2026-retheme-rfp` is the **public bidding** repo. Private vendor evaluation lives in a **separate** procurement repository and must **never** appear here.
+
+## Never add, copy, link, or commit
+
+- The `wht-2026-retheme-procurement/` directory or any clone/checkout of the private procurement repo
+- Vendor scorecards, vendor notes, or files under `vendors/` from procurement
+- Executed/signed NDAs (`*EXECUTED*.pdf`, signed PDFs, signature certificates)
+- Vendor proposals, bid analysis, or correspondence meant for internal evaluation
+- README or docs links to the private procurement repo or its GitHub URL
+- Paths like `documents/nda/`, `documents/proposals/` when they contain evaluation material
+
+## Allowed here
+
+- Public RFP, Q&A log, reference files, NDA **template** (`03-legal/NDA-template.md`), commercial template, workflow docs
+
+## Before any git commit or push
+
+1. Run `git status` and inspect every added/changed path.
+2. If any path matches the forbidden list above, **stop** — do not commit or push.
+3. Do not use `git add -f` to bypass `.gitignore` for procurement or evaluation files.
+
+## If asked to log vendor NDAs, proposals, or evaluation work
+
+Refuse in this repo. Tell the user to use the private procurement repository instead.
