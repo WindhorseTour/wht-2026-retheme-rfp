@@ -14,13 +14,18 @@ alwaysApply: true
 | **Private procurement (ONLY here)** | `/Users/hggreenberg/Development/wht-2026-retheme-procurement/` |
 | **Public RFP (this repo)** | `/Users/hggreenberg/Development/wht-2026-retheme-rfp/` |
 
-**FORBIDDEN — never create, write, copy, or mkdir:**
+**FORBIDDEN in this repo — never create, write, copy, or mkdir:**
 
-`/Users/hggreenberg/Development/wht-2026-retheme-rfp/wht-2026-retheme-procurement/`
+- `/Users/hggreenberg/Development/wht-2026-retheme-rfp/wht-2026-retheme-procurement/` (nested mirror — historical agent mistake)
+- Any `vendors/`, `documents/nda/`, `documents/proposals/`, scorecards, or vendor evaluation files
 
-That nested folder was a historical agent mistake. `.gitignore` hides it from git but **the folder must not exist on disk** in the RFP repo. If you see it, **delete it** (`rm -rf wht-2026-retheme-procurement`) and write to the sibling repo instead.
+If the nested folder exists on disk, **delete it** (`rm -rf wht-2026-retheme-procurement`). `.gitignore` hides it from git but does not prevent agents from writing there.
 
-Do not use a combined Cursor workspace that nests procurement inside the RFP tree.
+**FORBIDDEN cross-repo edit — even if the path exists on disk:**
+
+- Do **not** create, edit, commit, or push in `/Users/hggreenberg/Development/wht-2026-retheme-procurement/` while working in this RFP repo. Open that repo in its own Cursor workspace.
+
+Mirror rule in procurement repo: `.cursor/rules/workspace-only.mdc`
 
 ## Never add, copy, link, or commit
 
