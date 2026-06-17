@@ -4,7 +4,6 @@
 
 Public bidding materials for the 2026 WordPress block-theme re-theme.
 
-
 ## What is public vs NDA-gated
 
 | Access | Materials |
