@@ -22,8 +22,9 @@ You may sign **at any time** for early access — you do not need to wait until 
 
 1. Open **[NDA-template.md](NDA-template.md)** (or the PDF version WindhorseTour provides, if different).
 2. Complete **all vendor fields** — typically legal entity name, registered address, jurisdiction, and authorized signatory name and title. Leave WindhorseTour fields blank for countersignature.
-3. Have your **authorized signatory** review the agreement (use your counsel if required by your company).
-4. Confirm the signing party matches the **entity that will contract** and invoice if selected.
+3. Complete **Appendix A — Vendor Retention Disclosure** at signing. If you will retain **no** Company confidential information after the Project ends, write **"None"** in the first row and sign. If you want to retain anything, you must disclose **what**, **why**, **where**, **who**, **how long**, and **how it will be protected and destroyed** before or at signing. Blank or incomplete appendices mean you have **no right to retain** WindhorseTour materials.
+4. Have your **authorized signatory** review the agreement (use your counsel if required by your company).
+5. Confirm the signing party matches the **entity that will contract** and invoice if selected.
 
 ---
 
@@ -74,6 +75,7 @@ All submissions via **Slack** in the channel WindhorseTour opens when you are **
 ## Checklist
 
 - [ ] Vendor fields completed on [NDA-template.md](NDA-template.md)
+- [ ] **Appendix A** completed (specific retention disclosure, or **"None"**)
 - [ ] Authorized signatory signed; PDF is complete and readable
 - [ ] Uploaded to **Slack** (early access and/or with proposal)
 - [ ] Company name and contact stated in Slack when requesting early access
