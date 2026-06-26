@@ -1,7 +1,7 @@
 # DRAFT Addendum — Remove `page-inquiry-confirmation.php` from M1
 
 **Status:** DRAFT — not yet folded into the canonical RFP. Pending operator approval.
-**Date raised:** 2026-06-26 · **Origin:** wht-figma **OD-47** (descope of Figma template 05.21).
+**Date raised:** 2026-06-26 · **Origin:** wht-figma **OD-48** (descope of Figma template 05.21).
 
 ## Change
 
@@ -35,4 +35,4 @@ What is removed is only the *dedicated page template*; the confirmation is a sta
 system (`20.01 - windhorsetour_form_system_handoff.html`). The acceptance test for "inquiry → success
 confirmation" remains in scope under the forms test path.
 
-_Ref: wht-figma OD-47; reverses OD-45/Q2._
+_Ref: wht-figma OD-48; reverses OD-45/Q2._
