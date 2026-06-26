@@ -43,9 +43,12 @@ You are bidding to **build, test, and deploy** the re-theme. Proposals must pric
 1. **Block theme build** — Figma (`wht-figma`) → `theme.json`, design tokens, net-new CSS, build pipeline
 2. **Global chrome** — header, footer, navigation (shared shell across templates)
 3. **Templates** — re-theme every template file below; Figma frame IDs where design exists (see §4)
+
+  > **Scope update — 2026-06-26 (see qa-log Q52).** Removed from vendor scope: **FAQ category** (`page-faq-category.php` · `taxonomy-faq_category.php`), **FAQ search** (`page-faq-search.php`), **Single FAQ** (`single-faq.php`), **Shortlist** (`page-shortlist.php`), **Tour landing** (`single-tour-landing-page.php`). The **FAQ hub** (`page-faq.php`) remains in scope.
+
   - Home — `front-page.php` (Figma `04.00`)
   - Tour PDP — `single-trip.php` (Figma `00.00` private · `00.01` group)
-  - Trip archive — `archive-trip.php`
+  - Trip archive — `archive-trip.php` (reuses SRP listing pattern — no dedicated design)
   - Search results (SRP) — `template-srp.php`
   - Page fallback — `page.php`
   - Travel guide hub — `page-china-travel-guide.php` (Figma `01.00`)
@@ -53,19 +56,14 @@ You are bidding to **build, test, and deploy** the re-theme. Proposals must pric
   - Travel guide category — `taxonomy-travel_tip_category.php` (Figma `02.00` · `02.01`)
   - Travel article — `single-travel-tips.php` (Figma `02.02`)
   - Level 1 landing — `level1-landing-page.php` (Figma `03.00` · `03.01`)
-  - Tour landing — `single-tour-landing-page.php`
-  - Attractions index — `page-attractions.php`
+  - Attractions index — `page-attractions.php` (design deferred — single-attraction prioritized)
   - Single attraction — `single-attraction.php`
-  - FAQ hub — `page-faq.php`
-  - FAQ category — `page-faq-category.php` · `taxonomy-faq_category.php`
-  - FAQ search — `page-faq-search.php`
-  - Single FAQ — `single-faq.php`
-  - Blog — `page-blog.php` · `single.php` (Figma `20.00` where applicable)
+  - FAQ hub — `page-faq.php` (Figma `06.00`)
+  - Blog — `page-blog.php` · `single.php` (Figma `05.00` · `05.01`)
   - Inquiry confirmation — `page-inquiry-confirmation.php`
   - Tailor-made — `page-tailor-made.php`
-  - Shortlist — `page-shortlist.php`
-  - Site search — `page-search.php`
-  - Page layouts — `page-sidebar-left.php` · `page-without-sidebar.php`
+  - Site search — `page-search.php` (dedicated design)
+  - Page layouts — `page-sidebar-left.php` · `page-without-sidebar.php` (handled by the `page.php` generic template — no separate designs)
   - Not found — `404.php`
 4. **WP Travel Engine (WPTE) integration** — WPTE is an **existing plugin**; tour data and booking logic already live in WPTE. Scope is **theme integration only** — classic trip templates, template overrides, and preserved enquiry/booking behavior (not plugin replacement or tour data migration)
 5. **HubSpot enquiry** — port existing enquiry flows without regression
@@ -144,7 +142,7 @@ The new theme must output **consistent, correct metadata** on every template —
 - **Canonical URLs** — align with §3.1; no theme output that conflicts with Rank Math canonical or custom URL behavior  
 - **Open Graph / social** — where Rank Math or existing content provides tags, preserved on priority templates  
 - **Heading structure** — one logical `**h1`** per page; FAQ and archive templates must not break crawlable question/answer structure  
-- **FAQ surfaces** (`page-faq.php`, category, search, `single-faq.php`) — question titles, page titles, and visible Q&A content must match editor/Rank Math intent; stable FAQ URLs and listing behavior
+- **FAQ hub** (`page-faq.php`) — question titles, page titles, and visible Q&A content must match editor/Rank Math intent; stable FAQ URLs and listing behavior. _(FAQ category/search/single-FAQ removed from scope 2026-06-26, Q52.)_
 
 **Acceptance:** Metadata regressions are in scope for remediation. **LHCI SEO** (§8.2) and **FAQ Playwright** coverage (§8.1, M7) are part of verification; WindhorseTour may also spot-check priority URLs on staging before milestone sign-off.
 
@@ -364,7 +362,7 @@ Vendors propose **working days from kickoff** for each milestone (**Appendix B**
 | **M4 — Home**                     | **Production:** `front-page.php` (Figma `04.00`)                                                                                                                                                                                                              |
 | **M5 — Listings & search**        | **Production:** `archive-trip.php`, `template-srp.php`, `page-search.php`                                                                                                                                                                                     |
 | **M6 — Landings & attractions**   | **Production:** `level1-landing-page.php` (Figma `03.00` · `03.01`), `single-tour-landing-page.php`, `page-attractions.php`, `single-attraction.php`                                                                                                          |
-| **M7 — FAQ, blog & remaining**    | **Production:** FAQ suite (`page-faq.php`, `page-faq-category.php`, `taxonomy-faq_category.php`, `page-faq-search.php`, `single-faq.php`), `page-blog.php` · `single.php`, `page-shortlist.php`, `page.php`, sidebar layouts, `404.php` — plus smoke coverage |
+| **M7 — FAQ, blog & remaining**    | **Production:** FAQ hub (`page-faq.php`), `page-blog.php` · `single.php`, `page.php`, `404.php` — plus smoke coverage. _(Scope update 2026-06-26, Q52: FAQ category/search/single-FAQ and shortlist removed; sidebar layouts handled by `page.php`.)_ |
 | **M8 — Cutover**                  | Final acceptance, warranty start, handoff complete                                                                                                                                                                                                            |
 
 
