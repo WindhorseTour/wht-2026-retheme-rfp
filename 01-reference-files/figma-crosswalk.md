@@ -11,7 +11,7 @@ Maps **§2** theme templates to Figma frame IDs in the [WHT Design System](https
 | `single-trip.php` (group tour PDP) | `00.01` | M2 |
 | `page-inquiry-confirmation.php` | — | M1 |
 | `page-tailor-made.php` | — | M2 |
-| `page-china-travel-guide.php` | `01.00` | M3 |
+| `page-china-travel-guide.php` | `01.00` · `01.02` | M3 |
 | `page-travel-guide-archive.php` | `01.01` | M3 |
 | `taxonomy-travel_tip_category.php` | `02.00` · `02.01` | M3 |
 | `single-travel-tips.php` | `02.02` | M3 |
@@ -20,11 +20,11 @@ Maps **§2** theme templates to Figma frame IDs in the [WHT Design System](https
 | `page-attractions.php` | — | M6 |
 | `single-attraction.php` | — | M6 |
 | Global chrome (header, footer, nav) | `20.00` | M0 |
-| `page-blog.php` · `single.php` | `20.00` where applicable | M7 |
+| `page-blog.php` · `single.php` | `05.00` · `05.01` | M7 |
 | `archive-trip.php` | — | M5 |
-| `template-srp.php` | — | M5 |
+| `template-srp.php` | `07.00` | M5 |
 | `page-search.php` | — | M5 |
-| FAQ suite (`page-faq.php`, category, search, `single-faq.php`) | — | M7 |
+| FAQ suite (`page-faq.php` = hub; category/search/`single-faq.php` descoped by WHT) | `06.00` (hub) | M7 |
 | `page-shortlist.php`, `page.php`, sidebar layouts, `404.php` | — | M7 |
 
 Design tokens and component registry: **`wht-figma`** (access after NDA if needed).
